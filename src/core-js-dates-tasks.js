@@ -78,7 +78,7 @@ function getNextFriday(date) {
   let dayFriday = (5 - day.getDay() + 7) % 7;
   if (dayFriday === 0) {
     dayFriday = 7;
-  } 
+  }
   day.setDate(day.getDate() + dayFriday);
   return day;
 }
