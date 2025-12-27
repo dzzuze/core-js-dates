@@ -75,7 +75,8 @@ function getDayName(date) {
  */
 function getNextFriday(date) {
   const day = new Date(date);
-  let dayFriday = (5 - day.getDay() + 7) % 7;
+  const currentDay = date.getDay();
+  let dayFriday = (5 - currentDay + 7) % 7;
   if (dayFriday === 0) {
     dayFriday = 7;
   }
