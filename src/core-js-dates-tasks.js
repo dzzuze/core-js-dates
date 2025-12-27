@@ -75,12 +75,12 @@ function getDayName(date) {
  */
 function getNextFriday(date) {
   const day = new Date(date);
-  const currentDay = day.getDay();
+  const currentDay = day.getUTCDay();
   let dayFriday = (5 - currentDay + 7) % 7;
   if (dayFriday === 0) {
     dayFriday = 7;
   }
-  day.setDate(day.getDate() + dayFriday);
+  day.setUTCDate(day.getUTCDate() + dayFriday);
   return day;
 }
 
