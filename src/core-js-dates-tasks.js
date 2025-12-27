@@ -76,7 +76,7 @@ function getDayName(date) {
 function getNextFriday(date) {
   const day = new Date(date);
   const dayFriday = (5 - day.getDay() + 7) % 7;
-  if (dayFriday === 0) { // ?
+  if (dayFriday === 0) {
     day.setDate(day.getDate() + 7);
   } else {
     day.setDate(day.getDate() + dayFriday);
